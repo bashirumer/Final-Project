@@ -1,0 +1,17 @@
+{
+  "policyId": "org.eclipse.sdv:vehicle-policy",
+  "attributes": {
+    "manufacturer": "SDV-Demo",
+    "model": "Iteration1"
+  },
+  "features": {
+    "telemetry": {
+      "properties": {
+        "speed": 0,
+        "steeringAngle": 0,
+        "batteryLevel": 100,
+        "engineFault": false
+      }
+    }
+  }
+}
