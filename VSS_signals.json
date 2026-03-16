@@ -1,0 +1,31 @@
+{
+  "Vehicle": {
+    "type": "branch",
+    "description": "Top level vehicle branch",
+    "children": {
+      "Speed": {
+        "datatype": "float",
+        "type": "sensor",
+        "unit": "km/h",
+        "description": "Vehicle speed"
+      },
+      "SteeringAngle": {
+        "datatype": "float",
+        "type": "sensor",
+        "unit": "degrees",
+        "description": "Steering wheel angle"
+      },
+      "BatteryLevel": {
+        "datatype": "float",
+        "type": "sensor",
+        "unit": "percent",
+        "description": "Battery state of charge"
+      },
+      "EngineFault": {
+        "datatype": "boolean",
+        "type": "sensor",
+        "description": "Engine fault flag - true when speed exceeds 120 km/h"
+      }
+    }
+  }
+}
