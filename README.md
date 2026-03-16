@@ -1,7 +1,8 @@
 # SOFE3290: Software Quality & Project Management
 ## Iteration 1: Baseline SDV Pipeline Implementation
-**Project Group:  24 **
-** Members: ** Umer Bashir, Abdul Aziz Syed, Nathan Tenn, Shahyan Soltani, Aryan Kumar
+**Project Group:** 24
+
+**Members:** Umer Bashir, Abdul Aziz Syed, Nathan Tenn, Shahyan Soltani, Aryan Kumar
 
 ---
 
