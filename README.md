@@ -19,7 +19,7 @@ Eclipse Kuksa Databroker  (Docker)
         ↓  Python middleware bridge (500ms simulated transport delay)
 Eclipse Ditto  (Docker Compose)
         ↓
-Flask Dashboard  → http://127.0.0.1:5050/state
+Flask Dashboard (OpenSOVD style) → http://127.0.0.1:5050/state
 ```
 
 ### Pipeline Components
@@ -30,7 +30,7 @@ Flask Dashboard  → http://127.0.0.1:5050/state
 | Eclipse Kuksa Databroker | Vehicle data abstraction layer — receives and stores VSS signals |
 | `bridge/bridge.py` | Middleware layer — reads from Kuksa, applies 500ms delay, pushes to Ditto |
 | Eclipse Ditto | Digital twin backend — persists and represents vehicle state |
-| `dashboard/dashboard.py` | Monitoring interface — live vehicle state at `http://127.0.0.1:5050/state` |
+| `dashboard/dashboard.py` (OpenSOVD style) | Monitoring interface — live vehicle state at `http://127.0.0.1:5050/state` or subqueries such as `http://127.0.0.1:5050/vehicle/signals/speed`  |
 
 ### Functional Modification
 
@@ -159,6 +159,18 @@ python3 dashboard/dashboard.py
 ```
 
 Open `http://127.0.0.1:5050/state` in your browser to see the live vehicle state.
+
+There are several OpenSOVD style endpoints that can be queried:
+| Endpoint | Description |
+|---|---|
+| `/state` | Returns a full snapshot of the vehicle state |
+| `/vehicle/signals/speed` | Returns the current vehicle speed |
+| `/vehicle/signals/steering-angle` | Returns the current steering angle |
+| `/vehicle/powertrain/battery` | Returns the battery level |
+| `/diagnostics/status` | Returns the overall diagnostic status of the vehicle |
+| `/diagnostics/faults` | Returns a list of active diagnostic faults |
+
+For example: `http://127.0.0.1:5050/diagnostics/status`
 
 ---
 
