@@ -10,7 +10,8 @@
         "speed": 0,
         "steeringAngle": 0,
         "batteryLevel": 100,
-        "engineFault": false
+        "engineFault": false,
+        "batteryWarning": false
       }
     }
   }

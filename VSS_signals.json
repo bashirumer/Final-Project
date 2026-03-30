@@ -25,7 +25,12 @@
         "datatype": "boolean",
         "type": "sensor",
         "description": "Engine fault flag - true when speed exceeds 120 km/h"
-      }
+      },
+      "BatteryWarning": {
+    "datatype": "boolean",
+    "type": "sensor",
+    "description": "Battery critical warning - true when battery drops below 20%"
     }
   }
+}
 }
