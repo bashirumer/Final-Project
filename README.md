@@ -17,9 +17,9 @@ Iteration 2 extends the baseline with three additions: a **battery critical warn
 ## System Architecture
 ```
 Vehicle Simulator (Python)
-        ↓  VSS signals via gRPC
+        ↓  *VSS signals via gRPC*
 Eclipse Kuksa Databroker  (Docker)
-        ↓  Python middleware bridge (500ms simulated transport delay)
+        ↓  *Python middleware bridge (500ms simulated transport delay)*
 Eclipse Ditto  (Docker Compose)
         ↓
 Flask Dashboard (OpenSOVD style) → http://127.0.0.1:5050/state
